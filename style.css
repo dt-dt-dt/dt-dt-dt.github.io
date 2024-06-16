@@ -168,7 +168,7 @@
     font-style: italic;
   }
 
-.left-header {
+.left-header, .right-header {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -177,10 +177,17 @@
     position: fixed;
     z-index: 1;
     top: 0;
-    left: 0;
     overflow-x: hidden;
     padding-top: 5px;
+}
+
+.left-header {
     background-color: #5030dc;
+    left: 0;
+}
+
+.right-header {
+    right: 0;
 }
 
 .nav {
@@ -199,4 +206,23 @@
 .nav li:hover, .selected {
     background-color: #fff;
     color: #5030dc !important;
+}
+
+.gallery {
+    margin-left: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    row-gap: 5px;
+
+}
+
+figcaption {
+    background-color: #5030dc;
+    color: #fff;
+    font-family: 'IBM Plex Sans', sans-serif
+}
+
+.element img {
+    width: fit-content;
 }

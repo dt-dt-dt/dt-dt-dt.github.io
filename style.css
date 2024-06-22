@@ -65,6 +65,7 @@ p, a, li {
 
 a {
     color: #5030dc;
+    text-decoration: none;
 }
 
 .index-items {
@@ -199,4 +200,23 @@ header {
 
 .element:hover .gallery-overlay {
     opacity: 1;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    margin-right: 16px;
+}
+
+footer p {
+    color: #232323;
+}
+
+.footer-links {
+    display: flex;
+    justify-content:space-around;
+    list-style-type:none;
+    gap: 16px;
+    padding: 0;
 }

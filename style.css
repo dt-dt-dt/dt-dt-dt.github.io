@@ -1,5 +1,15 @@
-html { 
-    background: url(IMG_1194.jpg) no-repeat center center fixed; 
+html {
+    background-color: #232323;
+}
+
+#overlay {
+    background-color: rgba(15, 0, 83, 0.35);
+    position: absolute;
+    min-height: 100vh;
+}
+
+.index {
+    background: url(IMG_1194.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -8,10 +18,6 @@ html {
 
 body {
     margin: 0;
-}
-
-card-bg {
-    background-color: #fff;
 }
 
 /* variables */
@@ -57,7 +63,35 @@ p, a, li {
     font-weight: 300;
 }
 
-.header {
+a {
+    color: #5030dc;
+}
+
+.index-items {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 8px;
+    padding-bottom: 50px;
+}
+
+.index-items p {
+    font-size: 64pt;
+    margin: 0px 0px -24px 0px;
+    font-kerning: normal;
+    color: #232323;
+}
+
+.index-items a p {
+    color: #5030dc;
+}
+
+.index-items a {
+    text-decoration: none;
+}
+
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -70,16 +104,32 @@ p, a, li {
 
 /* spacer */
 .cover { 
-    height: 600px;
+    height: 500px;
 }
 
 .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding: 16px;
     background-color: #fff;
 }
 
-.footer { 
-    background-color: #fff;
+.main h1{
+    font-size: 64pt;;
+}
+
+.no-col {
+    display: block;
+}
+
+.link-container {
+    display: flex;
+    width: 95vw;
+    justify-content: space-between;
+}
+
+.index-items .main {
+    background-color: rgb(255, 255, 255, 0);
 }
 
 #home-header, .nav {
@@ -100,4 +150,8 @@ p, a, li {
 .nav a {
     text-decoration: none;
     
+}
+
+.element img {
+    width: 600px;
 }

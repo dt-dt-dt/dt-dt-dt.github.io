@@ -96,6 +96,9 @@ header {
     border-radius: 50px;
     margin: 8px;
     padding: 0 16px;
+}
+
+.shadow {
     box-shadow: 0px 0px 50px rgb(0, 0, 0, 0.25);
 }
 
@@ -105,8 +108,6 @@ header {
 }
 
 .main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     padding: 16px;
     background-color: #fff;
 }
@@ -115,12 +116,23 @@ header {
     font-size: 64pt;
 }
 
-.main h2 {
-    font-size: 56pt;
-}
-
 .no-col {
     display: block;
+}
+
+.twocol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: baseline;
+}
+
+.twocol h2 {
+    font-size: 32pt;
+    margin: 0px 0px 0px 16px;
+}
+
+.twocol p {
+    color: #232323
 }
 
 .link-container {
@@ -219,4 +231,8 @@ footer p {
     list-style-type:none;
     gap: 16px;
     padding: 0;
+}
+
+.item {
+    margin-bottom: 48px;
 }

@@ -112,6 +112,10 @@ header {
     background-color: #fff;
 }
 
+.main p {
+    color: #232323;
+}
+
 .main h1{
     font-size: 64pt;
     margin-left: 8px;

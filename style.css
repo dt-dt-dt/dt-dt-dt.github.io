@@ -1,247 +1,179 @@
-#overlay {
-    background-color: rgba(15, 0, 83, 0.35);
-    position: absolute;
-    min-height: 100vh;
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+@font-face {
+    font-family: 'Crude';
+    src: url('font/Crude.otf');
 }
 
-.index {
-    background: url(IMG_1194.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
+:root {
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+    :root { font-family: InterVariable, sans-serif; }
+}
+
+:root {
+    --main-font: "Inter", sans-serif;
+    --big-header-font: "Crude", sans-serif;
+    --nav-font-size: 12pt;
+    --text-colour: rgb(225, 252, 227);
+}
+
+/* GRIDS START */
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 32px;
+}
+
+.three-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 32px;
+    row-gap: 32px;
+}
+
+/* GRIDS END */
 
 body {
+    /* background-color: rgb(236, 64, 41); */
+    background-color: rgb(55, 43, 207);
     margin: 0;
 }
 
-/* variables */
-:root {
-    --main-font: "Almarai", sans-serif;
-    --border: 0.25px solid #232323;
-}
-
-.almarai-light {
-    font-family: "Almarai", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-}
-  
-.almarai-regular {
-    font-family: "Almarai", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-  
-.almarai-bold {
-    font-family: "Almarai", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-}
-  
-.almarai-extrabold {
-    font-family: var(--main-font);
-    font-weight: 800;
-    font-style: normal;
-}   
-
-h1, h2, h3, h4, h5, h6, p, a, li {
-    font-family: var(--main-font);
-}
-
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 400;
+    font-family: var(--main-font);
+    font-weight: 500;
+    color: var(--text-colour);
 }
 
-p, a, li {
-    font-size: 20px;
+p, li, a {
+    font-family: var(--main-font);
     font-weight: 300;
-}
-
-a {
-    color: #5030dc;
+    color: var(--text-colour);
     text-decoration: none;
 }
 
-.index-items {
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    padding: 8px;
-    padding-bottom: 50px;
-}
-
-.index-items p {
-    font-size: 64pt;
-    margin: 0px 0px -24px 0px;
-    font-kerning: normal;
-    color: #232323;
-}
-
-.index-items a p {
-    color: #5030dc;
-}
-
-.index-items a {
+a:hover, .portfolio h1:hover {
+    color: rgb(255, 219, 0);
     text-decoration: none;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
-
 
 header {
     display: flex;
-    justify-content: space-between;
+}
+
+header, .footer {
     align-items: baseline;
-    background-color: #fff;
-    border-radius: 50px;
-    margin: 8px;
-    padding: 0 16px;
-}
-
-.shadow {
-    box-shadow: 0px 0px 50px rgb(0, 0, 0, 0.25);
-}
-
-/* spacer */
-.cover { 
-    height: 500px;
-}
-
-.main {
-    padding: 16px;
-    background-color: #fff;
-}
-
-.main p {
-    color: #232323;
-}
-
-.main h1{
-    font-size: 64pt;
-    margin-left: 8px;
-}
-
-.no-col {
-    display: block;
-}
-
-.twocol {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: baseline;
-}
-
-.twocol h2 {
-    font-size: 32pt;
-    margin: 0px 0px 0px 16px;
-}
-
-.twocol p {
-    color: #232323
-}
-
-.link-container {
-    display: flex;
-    width: 95vw;
     justify-content: space-between;
+    margin: 16px 32px;
 }
 
-.index-items .main {
-    background-color: rgb(255, 255, 255, 0);
-}
-
-#home-header, .nav {
-    font-size: 20px;
-}
-
-.nav {
-    display: flex;
-    gap: 20px;
-    margin: -20px 0px;
-    transition: font-weight 1s;
-}
-
-.nav li {
-    display: inline;
-}
-
-.nav a {
-    text-decoration: none;
-    
-}
-
-.gallery {
-    display: flex;
-    padding: 16px;
-    background-color: #fff;
-    justify-content: center;
-    gap: 16px;
-}
-
-.element {
-    position: relative;
-}
-
-.gallery .element img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-.gallery-overlay {
-    position: absolute; 
-    left: 0;
-    top: 0;
-    background-color: rgba(29, 27, 36, 0.8);
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: 120ms ease;
-}
-
-.gallery-overlay h2, p {
-    color: #fff;
-    margin-left: 16px;
-}
-
-.gallery-overlay h2 {
-    margin:16px 0px -16px 16px;
-    font-size: 24pt;
+header h1, a {
+    font-family: var(--main-font);
+    font-size: var(--nav-font-size);
+    color: var(--text-colour);
     font-weight: 300;
 }
 
-.gallery-overlay p {
-    color: rgb(255, 255, 255, 0.7);
+header h1, ul {
+    margin: 0;
 }
 
-.element:hover .gallery-overlay {
-    opacity: 1;
+.footer {
+    background-color: #000;
+    margin: 0;
+    padding: 32px;
 }
 
-footer {
-    display: flex;
-    justify-content: space-between;
-    background-color: #fff;
-    margin-right: 16px;
-}
-
-footer p {
-    color: #232323;
-}
-
-.footer-links {
-    display: flex;
-    justify-content:space-around;
-    list-style-type:none;
-    gap: 16px;
+.footer ul {
+    list-style: none;
     padding: 0;
 }
 
-.item {
-    margin-bottom: 48px;
+.footer p {
+    font-size: 12pt;
 }
 
-.contact {
-    padding-bottom: 16px;
+header a {
+    text-decoration: none;
+}
+
+.top-nav {
+    display: flex;
+    gap: 32px;
+    font-size: var(--nav-font-size);
+    list-style-type: none;;
+}
+
+.main {
+    padding: 0 32px;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+}
+
+h1::after {
+    font-weight: 300;
+    content: '';
+    flex: 1;
+    margin-left: 1rem;
+    height: 1px;
+    background-color: #fff;
+}
+
+.portfolio {
+    background-color: #fff;
+    margin: 0;
+    padding: 32px 32px 64px 32px;
+}
+
+.portfolio h1 {
+    color: #000;
+}
+
+.portfolio-labels {
+    white-space: nowrap;
+}
+
+.portfolio-labels h2, h3 {
+    color: #000;
+    font-size: 12pt;
+}
+
+.portfolio-item a {
+    color: #000;
+    text-decoration: none;
+}
+
+.portfolio-item h2 {
+    color: #000;
+    margin-right: 32px;
+}
+
+.portfolio-labels h3 {
+    font-weight: 300;
+    text-indent: 2em;
+    margin-top: -5px;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.big-index-text p {
+    padding: 64px 0;
+    letter-spacing: -5px;
+    line-height: 1.2;
+    font-size: 72pt;
+}
+
+.big-index-text a {
+    font-size: 72pt;
+    font-weight: 500;
 }

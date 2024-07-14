@@ -25,6 +25,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 32px;
+    row-gap: 32px;
 }
 
 .three-col {
@@ -176,4 +177,53 @@ h1 {
 .big-index-text a {
     font-size: 72pt;
     font-weight: 500;
+}
+
+label-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+@media only screen and (max-width: 1315px) {
+    .two-col {
+        grid-template-columns: 1fr;
+    }
+    /* .portfolio-item img {
+        width: 100%;
+        height: auto;
+    } */
+}
+
+@media only screen and (max-width: 1080px) {
+    .big-index-text p, .big-index-text a {
+        font-size: 32pt;
+        letter-spacing: -2px;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .two-col {
+        grid-template-columns: 1fr;
+    }
+
+    .big-index-text p, .big-index-text a {
+        font-size: 24pt;
+        letter-spacing: -1px;
+        padding: 32px 0;
+    }
+
+    .three-col {
+        grid-template-columns: auto;
+        row-gap: 16px;
+    }
+
+    .top-nav {
+        display: block;
+    }
+
+    .portfolio-labels {
+        white-space: unset;
+    }
+
 }

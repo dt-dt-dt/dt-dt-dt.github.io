@@ -118,15 +118,6 @@ h1 {
     margin-bottom: 32px;
 }
 
-h1::after {
-    font-weight: 300;
-    content: '';
-    flex: 1;
-    margin-left: 1rem;
-    height: 1px;
-    background-color: #fff;
-}
-
 .white {
     background-color: #fff;
     margin: 0;
@@ -157,10 +148,14 @@ h1::after {
 
 .portfolio-item h2 {
     color: #000;
-    margin-right: 32px;
+    margin: 0 32px 8px 0;
 }
 
-.portfolio-labels h3 {
+.portfolio-item p {
+    margin: 0 32px -2px 0;
+}
+
+.portfolio-labels h3, .indent {
     font-weight: 300;
     text-indent: 2em;
     margin-top: -5px;

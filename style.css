@@ -185,10 +185,8 @@ label-container {
 }
 
 
-@media only screen and (max-width: 1315px) {
-    .two-col {
-        grid-template-columns: 1fr;
-    }
+@media only screen and (max-width: 1300px) {
+
     /* .portfolio-item img {
         width: 100%;
         height: auto;
@@ -196,6 +194,9 @@ label-container {
 }
 
 @media only screen and (max-width: 1080px) {
+    .two-col {
+        grid-template-columns: 1fr;
+    }
     .big-index-text p, .big-index-text a {
         font-size: 32pt;
         letter-spacing: -2px;

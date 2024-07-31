@@ -117,3 +117,20 @@ button:hover {
     background-color: white;
     color: black;
 }
+
+.list {
+    width: 100%;
+}
+
+table {
+    color: white;
+    text-align: left;
+}
+
+a {
+    color: white;
+}
+
+img {
+    width: 100%;
+}

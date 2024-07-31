@@ -27,6 +27,10 @@ html {
     background-color: antiquewhite;
 }
 
+body {
+    margin: 0;
+}
+
 .wrapper {
     width: 700px;
     margin: 0 auto;
@@ -72,4 +76,17 @@ button:hover {
     display: flex;
     gap: 12px;
     font-family: "InstrumentSerif-Italic", serif;
+}
+
+.header-full {
+    background-color: orangered;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.header-full a {
+    text-decoration: none;
+    color: white;
 }

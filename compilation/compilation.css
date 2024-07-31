@@ -24,7 +24,7 @@
 }
 
 html {
-    background-color: antiquewhite;
+    background-color: orangered;
 }
 
 body {
@@ -39,10 +39,12 @@ body {
 h1, h2, h3 {
     font-family: var(--header-font);
     font-weight: 300;
+    color: white;
 }
 
 p {
     font-family: var(--main-font);
+    color: white;
 }
 
 a {
@@ -58,6 +60,14 @@ button {
     font-size: 16pt;
     padding: 16px;
     width: 100%;
+}
+
+.page-nav-button {
+    color: white;
+}
+
+.faded {
+    opacity: 50%;
 }
 
 button:hover {

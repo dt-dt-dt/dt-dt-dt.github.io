@@ -90,3 +90,20 @@ button:hover {
     text-decoration: none;
     color: white;
 }
+
+.orange {
+    background-color: orangered;
+}
+
+.orange h1, .orange h2, .orange h3, .orange p, .orange a {
+    color: white;
+} 
+
+.orange button {
+    background-color: black;
+}
+
+.orange button:hover {
+    background-color: white;
+    color: black;
+}

@@ -10,11 +10,66 @@
 
 :root {
     --main-font: "Inter", sans-serif;
-    --nav-font-size: 12pt;
-    --text-colour: rgb(225, 252, 227);
+    --header-font: "InstrumentSerif-Regular", serif;
 }
 
-h1 {
+@font-face {
+    font-family: InstrumentSerif-Regular;
+    src: url(InstrumentSerif-Regular.ttf);
+}
+
+@font-face {
+    font-family: InstrumentSerif-Italic;
+    src: url(InstrumentSerif-Italic.ttf);
+}
+
+html {
+    background-color: antiquewhite;
+}
+
+.wrapper {
+    width: 700px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-family: var(--header-font);
+    font-weight: 300;
+}
+
+p {
     font-family: var(--main-font);
-    font-weight: 1000;
+}
+
+a {
+    color: blue;
+}
+
+button {
+    background-color: black;
+    border: none;
+    border-radius: 50pt;
+    color: white;
+    font-family: var(--header-font);
+    font-size: 16pt;
+    padding: 16px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: orangered;
+    color: white;
+}
+
+.highlight {
+    background-color: orangered;
+    color: white;
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 12px;
+    font-family: "InstrumentSerif-Italic", serif;
 }

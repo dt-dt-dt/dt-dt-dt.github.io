@@ -1,232 +1,122 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 @font-face {
-    font-family: 'Crude';
-    src: url('font/Crude.otf');
+    font-family: "PPNeueMontreal-MonoBook";
+    src: url(font/PPNeueMontrealMono-Book.woff2);
+}
+
+@font-face {
+    font-family: "PPNeueMontreal-Book";
+    src: url(font/PPNeueMontreal-Book.woff2);
 }
 
 :root {
-    font-family: Inter, sans-serif;
-    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+    --reg-font: "PPNeueMontreal-Book", sans-serif;
+    --mono-font: "PPNeueMontreal-MonoBook", monospace;
+    --dylan-blue: rgb(53, 73, 252);
+    --dylan-orange: rgb(235, 85, 40);
 }
-@supports (font-variation-settings: normal) {
-    :root { font-family: InterVariable, sans-serif; }
-}
-
-:root {
-    --main-font: "Inter", sans-serif;
-    --big-header-font: "Crude", sans-serif;
-    --nav-font-size: 12pt;
-    --text-colour: rgb(225, 252, 227);
-}
-
-/* GRIDS START */
-.two-col {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 32px;
-    row-gap: 32px;
-}
-
-.three-col {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 32px;
-    row-gap: 32px;
-}
-
-/* GRIDS END */
 
 body {
-    /* background-color: rgb(236, 64, 41); */
-    background-color: rgb(55, 43, 207);
-    margin: 0;
+    margin: 9;
+    background-color: white;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--main-font);
-    font-weight: 500;
-    color: var(--text-colour);
-}
-
-p, li, a {
-    font-family: var(--main-font);
-    font-weight: 300;
-    color: var(--text-colour);
-    text-decoration: none;
-}
-
-a:hover, .portfolio h1:hover {
-    color: rgb(255, 219, 0);
-    text-decoration: none;
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-}
-
-
-header, .footer {
-    align-items: baseline;
-    justify-content: space-between;
-    margin: 16px 32px;
+.logo {
+    width: 2rem;
+    height: 100%;
 }
 
 header {
     display: flex;
+    gap: 0.5rem;
+    border-bottom: 0.25rem solid var(--dylan-blue);
 }
 
-header h1, a {
-    font-family: var(--main-font);
-    font-size: var(--nav-font-size);
-    color: var(--text-colour);
+header h1 {
+    font-family: var(--reg-font);
     font-weight: 300;
-}
-
-header h1, ul {
+    color: var(--dylan-blue);
+    font-size: 2rem;
     margin: 0;
-}
-
-.footer {
-    background-color: #000;
-    margin: 0;
-    padding: 32px;
-}
-
-.footer ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer p {
-    font-size: 12pt;
 }
 
 header a {
     text-decoration: none;
 }
 
-.top-nav {
+p, a, li {
+    font-family: var(--reg-font);
+    color: var(--dylan-blue);
+    font-size: 1.5rem;
+}
+
+h1:hover, a:hover, a:focus {
+    background-color: var(--dylan-blue);
+    color: white;
+    transition: 200ms color;
+}
+
+h2, h3 {
+    font-family: var(--reg-font);
+    color: var(--dylan-blue);
+    font-weight: 400;
+    font-size: 2rem;
+    border-bottom: 0.25rem solid var(--dylan-blue);
+}
+
+.list-proj h3 {
+    border-bottom: none;
+    font-size: 1.5rem;
+    margin: 2rem 0;
+}
+
+.list-proj {
     display: flex;
-    gap: 32px;
-    font-size: var(--nav-font-size);
-    list-style-type: none;;
+    flex-direction: column;
+    margin-bottom: 2rem;
 }
 
-.main {
-    padding: 0 32px;
+.then {
+    opacity: 75%;
 }
 
-h1 {
-    display: flex;
-    align-items: center;
-    margin-bottom: 32px;
+hr {
+    background-color: var(--dylan-blue);
+    border: none;
+    height: 0.25rem;
 }
 
-.white {
-    background-color: #fff;
-    margin: 0;
-    padding: 32px 32px 64px 32px;
+.callout p {
+    font-style: italic;
 }
 
-.white h1 {
-    color: #000;
-}
-
-.white p, .white li {
-    color: #000;
-}
-
-.portfolio-labels {
-    white-space: nowrap;
-}
-
-.portfolio-labels h2, h3 {
-    color: #000;
-    font-size: 12pt;
-}
-
-.portfolio-item a {
-    color: #000;
-    text-decoration: none;
-}
-
-.portfolio-item h2 {
-    color: #000;
-    margin: 0 32px 8px 0;
-}
-
-.portfolio-item p {
-    margin: 0 32px -2px 0;
-}
-
-.portfolio-labels h3, .indent {
-    font-weight: 300;
-    text-indent: 2em;
-    margin-top: -5px;
-}
-
-.portfolio-item img {
-    max-width: 100%;
-    height: auto;
-}
-
-.big-index-text h1, .big-index-text p {
-    padding: 64px 0;
-    letter-spacing: -2px;
-    line-height: 1.2;
-    font-size: 72pt;
-    font-weight: 300;
-}
-
-.big-index-text a {
-    font-size: 72pt;
-    font-weight: 500;
-}
-
-label-container {
+.two-col-for-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    row-gap: 0;
 }
 
-
-@media only screen and (max-width: 1300px) {
-
-    /* .portfolio-item img {
-        width: 100%;
-        height: auto;
-    } */
+.two-col-for-info p {
+    margin: 0.25rem 0;
 }
 
-@media only screen and (max-width: 1080px) {
+#intro {
+    margin-top: 1rem;
+}
+
+.faded {
+    opacity: 50%;
+}
+
+@media (width > 64rem) {
+    header, main {
+        width: 48rem;
+        margin: 0 auto;
+    }
     .two-col {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
     }
-    .big-index-text p, .big-index-text a {
-        font-size: 32pt;
-        letter-spacing: -2px;
-    }
-}
-
-@media only screen and (max-width: 470px) {
-    .two-col {
-        grid-template-columns: 1fr;
-    }
-
-    .big-index-text p, .big-index-text a {
-        font-size: 24pt;
-        letter-spacing: -1px;
-        padding: 32px 0;
-    }
-
-    .three-col {
-        grid-template-columns: auto;
-        row-gap: 16px;
-    }
-
-    .top-nav {
-        display: block;
-    }
-
-    .portfolio-labels {
-        white-space: unset;
-    }
-
 }

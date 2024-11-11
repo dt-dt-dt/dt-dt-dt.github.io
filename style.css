@@ -10,6 +10,16 @@
     src: url(font/PPNeueMontreal-Book.woff2);
 }
 
+@font-face {
+    font-family: "PPNeueMontreal-Medium";
+    src: url(font/PPNeueMontreal-Medium.woff2);
+}
+
+@font-face {
+    font-family: "PPNeueMontreal-Bold";
+    src: url(font/PPNeueMontreal-Bold.woff2);
+}
+
 :root {
     --reg-font: "PPNeueMontreal-Book", sans-serif;
     --mono-font: "PPNeueMontreal-MonoBook", monospace;

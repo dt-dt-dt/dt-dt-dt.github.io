@@ -119,6 +119,11 @@ hr {
     opacity: 50%;
 }
 
+.spaced-links {
+    display: flex;
+    justify-content: space-between;
+}
+
 @media (width > 64rem) {
     header, main {
         width: 48rem;

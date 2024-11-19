@@ -1,13 +1,6 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+/* fonts and boilerplate */
 
-:root {
-    font-family: Inter, sans-serif;
-    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
-    --dylan-blue: rgb(53, 73, 252);
-  }
-  @supports (font-variation-settings: normal) {
-    :root { font-family: InterVariable, sans-serif; }
-  }
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 @font-face {
     font-family: "PPNeueMontreal-MonoBook";
@@ -29,79 +22,97 @@
     src: url(font/PPNeueMontreal-Bold.woff2);
 }
 
+:root {
+    --book-font: "PPNeueMontreal-Book", sans-serif;
+    --medium-font: "PPNeueMontreal-Medium", sans-serif;
+    --bold-font: "PPNeueMontreal-Bold", sans-serif;
+    --d-blue: #3549FC;
+}
+
+/* Standard */
+
 body {
     margin: 0;
-    background-color: var(--dylan-blue);
 }
 
-/* header content */
-
-header {
-    margin: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: #fff 0.0125rem solid;
-}
-
-#main-nav h1 {
-    font-family: "PPNeueMontreal-Medium";
-    font-size: 2rem;
-    font-weight: 400;
-    margin: 0;
-    color: #fff;
-}
-
-#main-nav a {
-    text-decoration: none;
-}
-
-.nav-right-links a {
-    font-family: "PPNeueMontreal-Book";
-    font-size: 1rem;
-    color: #fff;
-    margin: 0;
-}
-
-
-/* body content */
-
-main, footer {
-    margin: 1rem;
+h1, h2 {
+    font-family: var(--bold-font);
+    font-weight: normal;
+    color: rgb(48, 48, 64);
 }
 
 h2 {
-    font-family: "PPNeueMontreal-Medium";
-    font-weight: 400;
-    color: #fff;
-    border-bottom: #fff 0.0125rem solid;
-    padding-bottom: 0.5rem;
+    font-size: 3rem;
 }
 
-p, li {
-    font-family: "PPNeueMontreal-Book";
-    color: #fff;
+p, a {
+    font-family: var(--book-font);
+    color: rgb(48, 48, 64);
 }
 
-a {
-    color: #fff
+a:hover, a:focus {
+    background-color: var(--d-blue);
+    color: white;
 }
 
-a:hover, a:focus, a.selected-link {
-    background-color: #fff;
-    color: #000;
+.general-sec, footer {
+    margin: 4rem 1rem 2rem 1rem;
 }
 
-#featured {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.85rem 1rem;
+.general-sec h2 {
+    margin-bottom: 1rem;
 }
 
-.featured-img {
-    margin: 0;
+
+/* header */
+
+header {
+    display: flex;
+    justify-content: center;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    margin: 2rem 0;
 }
+
+header h1 {
+    font-size: 16.5vw;
+    margin: 0;
+}
+
+header .h1-anchor {
+    text-decoration: none;
+}
+
+.h1-anchor:hover, .h1-anchor:focus {
+    background-color: unset;
+}
+
+
+/* figures (featured gallery) */
+
+.featured-item {
+    margin: 1rem 0;
+}
+
+.featured-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* contactlinks */
+
+/* .contact-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+} */
+
+.contact-links p {
+    margin: 0;
+}
+
+.link-icon-pair {
+    display: flex;
+}
+
 
 /* footer */
 
@@ -111,36 +122,36 @@ footer {
     align-items: baseline;
 }
 
-footer a {
-    text-decoration: none;
-}
-
-@media (width > 48rem) {
-    #main-nav h1 {
-        font-size: 3rem;
+@media (width >= 50rem) { /* 800px */
+    header {
+        justify-content: center;
     }
 
-    header, main, footer {
-        width: 48rem;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    #main-nav {
+    .header-content {
+        width: 50rem;
+        margin: 0 2rem;
         display: flex;
         align-items: baseline;
         justify-content: space-between;
     }
 
-    .two-col {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 1rem;
+    header h1 {
+        font-size: 4rem;
     }
 
     #featured {
         display: grid;
+        gap: 0.5rem;
         grid-template-columns: 1fr 1fr;
-        gap: 0.85rem 1rem;
     }
+
+    .featured-item {
+        margin: 0;
+    }
+
+    #contact, footer {
+        width: 40rem;
+        margin: 6rem auto;
+    }
+
 }

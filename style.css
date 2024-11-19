@@ -27,6 +27,7 @@
     --medium-font: "PPNeueMontreal-Medium", sans-serif;
     --bold-font: "PPNeueMontreal-Bold", sans-serif;
     --d-blue: #3549FC;
+    --d-black: rgb(48, 48, 64);
 }
 
 /* Standard */
@@ -35,19 +36,26 @@ body {
     margin: 0;
 }
 
-h1, h2 {
+h1, h2  {
     font-family: var(--bold-font);
     font-weight: normal;
-    color: rgb(48, 48, 64);
+    color: var(--d-black)
 }
 
 h2 {
     font-size: 3rem;
 }
 
+h3 {
+    font-family: var(--book-font);
+    font-weight: normal;
+    font-style: italic;
+    color: var(--d-black)
+}
+
 p, a {
     font-family: var(--book-font);
-    color: rgb(48, 48, 64);
+    color: var(--d-black)
 }
 
 a:hover, a:focus {
@@ -149,9 +157,14 @@ footer {
         margin: 0;
     }
 
-    #contact, footer {
-        width: 40rem;
+    footer {
+        width: 50rem;
         margin: 6rem auto;
+    }
+    
+    .small-width {
+        width: 50rem;
+        margin: 0 auto;
     }
 
 }

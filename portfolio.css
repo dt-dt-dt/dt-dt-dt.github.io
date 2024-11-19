@@ -1,0 +1,28 @@
+.portfolio-view {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 2rem;
+}
+
+.portfolio-item h3 {
+    margin: 0;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+}
+
+.portfolio-item {
+    margin: 0;
+}
+
+@media (width >= 50rem) {
+    .portfolio-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0;
+        gap: 1rem;
+    }
+}

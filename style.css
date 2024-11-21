@@ -130,7 +130,7 @@ footer {
     align-items: baseline;
 }
 
-@media (width >= 50rem) { /* 800px */
+@media (width >= 65rem) { /* 800px */
     /* header {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -138,7 +138,7 @@ footer {
     } */
 
     .header-content {
-        width: 50rem;
+        width: 65rem;
         margin: 0 2rem;
         display: flex;
         align-items: baseline;
@@ -150,6 +150,8 @@ footer {
     }
 
     #featured {
+        width: 65rem;
+        margin: 0 auto;        
         display: grid;
         gap: 0.5rem;
         grid-template-columns: 1fr 1fr;
@@ -160,12 +162,12 @@ footer {
     }
 
     footer {
-        width: 50rem;
+        width: 40rem;
         margin: 6rem auto;
     }
     
     .small-width {
-        width: 50rem;
+        width: 40rem;
         margin: 0 auto;
     }
 

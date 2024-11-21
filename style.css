@@ -36,13 +36,15 @@ body {
     margin: 0;
 }
 
-h1, h2  {
+h1   {
     font-family: var(--bold-font);
     font-weight: normal;
     color: var(--d-black)
 }
 
 h2 {
+    font-family: var(--book-font);
+    font-weight: normal;
     font-size: 3rem;
 }
 

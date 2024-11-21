@@ -131,21 +131,19 @@ footer {
 }
 
 @media (width >= 50rem) { /* 800px */
-    header {
+    /* header {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         width: 100%;
-    }
+    } */
 
-    /* .header-content {
+    .header-content {
         width: 50rem;
         margin: 0 2rem;
-        /* display: flex;
+        display: flex;
         align-items: baseline;
         justify-content: space-between;
-
-        
-    } */
+    }
 
     header h1 {
         font-size: 4rem;

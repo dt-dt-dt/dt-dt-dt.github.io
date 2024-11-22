@@ -44,7 +44,7 @@ h1   {
 h2 {
     font-family: var(--book-font);
     font-weight: normal;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 h3 {
@@ -101,6 +101,14 @@ header h1 {
     height: auto;
 }
 
+footer {
+    width: 64rem;
+    margin: 2rem auto;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
 
 
 @media (width >= 64rem) {
@@ -115,9 +123,15 @@ header h1 {
     #featured {
         width: 64rem;
         margin: 0 auto;
+        margin-top: 2rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
+    }
+
+    .small-width {
+        width: 64rem;
+        margin: 0 auto;
     }
 
     .featured-item {
@@ -146,4 +160,6 @@ header h1 {
     .link-text {
         display: block;
     }
+
+
 }

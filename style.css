@@ -27,7 +27,6 @@
     --medium-font: "PPNeueMontreal-Medium", sans-serif;
     --bold-font: "PPNeueMontreal-Bold", sans-serif;
     --d-blue: #3549FC;
-    --d-black: rgb(48, 48, 64);
 }
 
 /* Standard */
@@ -60,44 +59,38 @@ p, a {
     color: var(--d-black)
 }
 
-a:hover, a:focus {
+.featured-item:hover, .featured-item:focus, a:hover, a:focus {
     background-color: var(--d-blue);
     color: white;
 }
 
-.general-sec, footer {
-    margin: 4rem 1rem 2rem 1rem;
-}
-
-.general-sec h2 {
-    margin-bottom: 1rem;
-}
-
-
-/* header */
-
 header {
-    display: flex;
+    display: grid;
     justify-content: center;
-    width: 100%;
-    margin: 2rem 0;
 }
 
 header h1 {
+    font-family: var(--bold-font);
+    font-weight: normal;
     font-size: 16.5vw;
-    margin: 0;
+    margin: 1.25rem 0 0 0;
 }
 
-header .h1-anchor {
+.header-no-dec {
     text-decoration: none;
 }
 
-.h1-anchor:hover, .h1-anchor:focus {
-    background-color: unset;
+.link-text {
+    display: none;
 }
 
-
-/* figures (featured gallery) */
+.header-links {
+    margin: 1rem 0 0.5rem 0;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
 
 .featured-item {
     margin: 1rem 0;
@@ -108,69 +101,49 @@ header .h1-anchor {
     height: auto;
 }
 
-/* contactlinks */
-
-/* .contact-links {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-} */
-
-.contact-links p {
-    margin: 0;
-}
-
-.link-icon-pair {
-    display: flex;
-}
 
 
-/* footer */
-
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-}
-
-@media (width >= 65rem) { /* 800px */
-    /* header {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        width: 100%;
-    } */
-
-    .header-content {
-        width: 65rem;
-        margin: 0 2rem;
+@media (width >= 64rem) {
+    header {
+        width: 64rem;
+        margin: 0 auto;
         display: flex;
-        align-items: baseline;
         justify-content: space-between;
-    }
-
-    header h1 {
-        font-size: 4rem;
+        align-items: last baseline;
     }
 
     #featured {
-        width: 65rem;
-        margin: 0 auto;        
+        width: 64rem;
+        margin: 0 auto;
         display: grid;
-        gap: 0.5rem;
         grid-template-columns: 1fr 1fr;
+        gap: 1rem;
     }
 
     .featured-item {
         margin: 0;
     }
 
-    footer {
-        width: 40rem;
-        margin: 6rem auto;
-    }
-    
-    .small-width {
-        width: 40rem;
-        margin: 0 auto;
+    header h1 {
+        font-size: 3rem;
     }
 
+    .header-links {
+        font-size: 1rem;
+        display: block;
+    }
+
+    .header-links p {
+        margin: 0;
+    }
+
+    .link-icon {
+        display: flex;
+        gap: 0.25rem;
+        align-items: baseline;
+    }
+    
+    .link-text {
+        display: block;
+    }
 }

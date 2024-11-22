@@ -64,7 +64,13 @@ p, a {
     margin: auto 2rem;
 }
 
-.featured-item:hover, .featured-item:focus, a:hover, a:focus {
+header h1:hover,
+header h1:focus,
+p.link-text:hover,
+p.link-text:focus,
+a:hover,
+a:focus
+{
     background-color: var(--d-blue);
     color: white;
 }

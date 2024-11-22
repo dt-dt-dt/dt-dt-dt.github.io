@@ -27,6 +27,7 @@
     --medium-font: "PPNeueMontreal-Medium", sans-serif;
     --bold-font: "PPNeueMontreal-Bold", sans-serif;
     --d-blue: #3549FC;
+    --d-black: rgb(37, 37, 50);
 }
 
 /* Standard */
@@ -45,18 +46,22 @@ h2 {
     font-family: var(--book-font);
     font-weight: normal;
     font-size: 2rem;
+    color: var(--d-black)
 }
 
 h3 {
     font-family: var(--book-font);
     font-weight: normal;
-    font-style: italic;
     color: var(--d-black)
 }
 
 p, a {
     font-family: var(--book-font);
     color: var(--d-black)
+}
+
+.small-width {
+    margin: auto 2rem;
 }
 
 .featured-item:hover, .featured-item:focus, a:hover, a:focus {
@@ -102,8 +107,8 @@ header h1 {
 }
 
 footer {
-    width: 64rem;
-    margin: 2rem auto;
+    width: 95%;
+    margin: 0 auto;
     display: flex;
     align-items: baseline;
     justify-content: space-between;
@@ -127,6 +132,11 @@ footer {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
+    }
+
+    .portfolio-view {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 
     .small-width {
@@ -161,5 +171,9 @@ footer {
         display: block;
     }
 
+    footer {
+        width: 64rem;
+        margin: 2rem auto;
+    }
 
 }

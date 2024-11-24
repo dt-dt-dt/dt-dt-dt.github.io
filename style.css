@@ -1,197 +1,118 @@
-/* fonts and boilerplate */
-
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
-
-@font-face {
-    font-family: "PPNeueMontreal-MonoBook";
-    src: url(font/PPNeueMontrealMono-Book.woff2);
-}
-
-@font-face {
-    font-family: "PPNeueMontreal-Book";
-    src: url(font/PPNeueMontreal-Book.woff2);
-}
-
-@font-face {
-    font-family: "PPNeueMontreal-Medium";
-    src: url(font/PPNeueMontreal-Medium.woff2);
-}
-
-@font-face {
-    font-family: "PPNeueMontreal-Bold";
-    src: url(font/PPNeueMontreal-Bold.woff2);
-}
-
-:root {
-    --book-font: "PPNeueMontreal-Book", sans-serif;
-    --medium-font: "PPNeueMontreal-Medium", sans-serif;
-    --bold-font: "PPNeueMontreal-Bold", sans-serif;
-    --d-blue: #3549FC;
-    --d-black: rgb(37, 37, 50);
-}
-
-/* Standard */
-
 body {
-    margin: 0;
+    background-color: #3549FC;
 }
 
-h1   {
-    font-family: var(--bold-font);
-    font-weight: normal;
-    color: var(--d-black)
-}
-
-h2 {
-    font-family: var(--book-font);
-    font-weight: normal;
-    font-size: 2rem;
-    color: var(--d-black)
-}
-
-h3 {
-    font-family: var(--book-font);
-    font-weight: normal;
-    color: var(--d-black)
-}
-
-p, a {
-    font-family: var(--book-font);
-    color: var(--d-black)
-}
-
-.small-width {
-    margin: auto 2rem;
-}
-
-header h1:hover,
-header h1:focus,
-p.link-text:hover,
-p.link-text:focus,
-a:hover,
-a:focus
-{
-    background-color: var(--d-blue);
+h1, h2, h3, p, a {
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 300;
     color: white;
 }
 
-header {
-    display: grid;
-    justify-content: center;
-    padding-top: 1rem;
-}
-
-header h1 {
-    font-family: var(--bold-font);
-    font-weight: normal;
-    font-size: 16.5vw;
-    margin: 1.25rem 0 0 0;
-}
-
-.header-no-dec {
-    text-decoration: none;
-}
-
-.link-text {
-    display: none;
-}
-
-.header-links {
-    margin: 1rem 0 0.5rem 0;
-    font-size: 2rem;
-    display: flex;
-    justify-content: space-evenly;
-    gap: 1rem;
-}
-
-.featured-item {
-    margin: 1rem 0;
-}
-
-.featured-item img {
-    width: 100%;
-    height: auto;
+h1, h2 {
+    font-weight: 600;
 }
 
 footer {
-    width: 95%;
+    width: 20.3125rem;
     margin: 0 auto;
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-}
-
-main {
     margin-top: 4rem;
-    margin-bottom: 4rem;
+    text-align: center;
 }
 
-.less-marg {
-    margin-top: 1rem;
+header {
+    width: 20.3125rem;
+    margin: 0 auto;
+}
+
+header h1 {
+    rotate: -1deg;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header #pl-1 {
+    rotate: 1deg;
+    margin: 0rem;
+    font-size: 1.75rem;
+    margin-left: 0.5rem;
+}
+
+header #pl-2 {
+    rotate: -1deg;
+    margin: 0;
+    font-size: 1.75rem;
+    margin-left: 3rem;
+    margin-top: -0.25rem;
+}
+
+.main-links {
+    margin: 6rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.landing-container {
+    height: 48rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.circle, .square {
+    background-color: white;
+    border: none;
+    padding: 1rem;
+    height: 8rem;
+    width: 8rem;
+    font-size: 1rem;
+    text-decoration: none;
+    align-self: center;
+    cursor: pointer;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.square:hover,
+.square:focus,
+.circle:hover,
+.circle:focus {
+    background-color: #3549FC;
+    color: white;
+    border: white 0.75rem solid;
+    rotate: -10deg;
+    transition: all 100ms;
+    transition: border 300ms;
+    transition: rotate 100ms;
+}
+
+.circle:hover,
+.circle:focus {
+    rotate: 10deg;
 }
 
 
-@media (width >= 64rem) {
-    main {
-        margin-top: 8rem;
-    }
-    header {
-        width: 64rem;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: last baseline;
-    }
-
-    #featured {
-        width: 64rem;
-        margin: 0 auto;
-        margin-top: 2rem;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-    }
-
-    .portfolio-view {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    .small-width {
-        width: 64rem;
-        margin: 0 auto;
-    }
-
-    .featured-item {
-        margin: 0;
-    }
-
-    header h1 {
-        font-size: 3rem;
-    }
-
-    .header-links {
-        font-size: 1rem;
-        display: block;
-    }
-
-    .header-links p {
-        margin: 0;
-    }
-
-    .link-icon {
-        display: flex;
-        gap: 0.25rem;
-        align-items: baseline;
+@media (width >= 50rem) {
+    .landing-container {
+        flex-direction: row;
+        align-items: center;
+        height: 20rem;
+        margin-top: 10rem;
+        gap: 4rem;
     }
     
-    .link-text {
-        display: block;
+    header {
+        margin: unset;
+    }
+
+    .main-links {
+        flex-direction: row;
     }
 
     footer {
-        width: 64rem;
-        margin: 2rem auto;
+        margin-top: 0;
     }
-
 }

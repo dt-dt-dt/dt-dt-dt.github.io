@@ -63,7 +63,6 @@ header #pl-2 {
 .circle, .square {
     background-color: white;
     border: none;
-    padding: 1rem;
     height: 8rem;
     width: 8rem;
     font-size: 1rem;
@@ -82,7 +81,7 @@ header #pl-2 {
 .circle:focus {
     background-color: #3549FC;
     color: white;
-    border: white 0.75rem solid;
+    border: white 0.65rem solid;
     rotate: -10deg;
     transition: all 100ms;
     transition: border 300ms;
@@ -92,6 +91,13 @@ header #pl-2 {
 .circle:hover,
 .circle:focus {
     rotate: 10deg;
+}
+
+.construction:hover,
+.construction:focus {
+    background-color: #eda354;
+    border-color: #eda354;
+    color: #000;
 }
 
 

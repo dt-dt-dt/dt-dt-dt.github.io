@@ -78,6 +78,7 @@ a:focus
 header {
     display: grid;
     justify-content: center;
+    padding-top: 1rem;
 }
 
 header h1 {
@@ -120,9 +121,20 @@ footer {
     justify-content: space-between;
 }
 
+main {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.less-marg {
+    margin-top: 1rem;
+}
 
 
 @media (width >= 64rem) {
+    main {
+        margin-top: 8rem;
+    }
     header {
         width: 64rem;
         margin: 0 auto;

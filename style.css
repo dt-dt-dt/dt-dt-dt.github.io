@@ -22,9 +22,10 @@ footer {
 }
 
 header {
-    width: 20.3125rem;
+    width: max-content;
     margin: 0 auto;
     margin-top: 2rem;
+
 }
 
 header h1 {
@@ -120,10 +121,14 @@ header #pl-2 {
     transition: rotate 100ms;
 }
 
+main {
+    margin: 2rem 0;
+}
+
 @media (width >= 50rem) {
     .landing-container {
         /* flex-direction: row; */
-        height: 20rem;
+        /* height: 20rem; */
         margin-top: 10rem;
     }
     

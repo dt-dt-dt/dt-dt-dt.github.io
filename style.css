@@ -21,6 +21,7 @@ a {
 a:hover, a:focus {
     background-color: var(--d-blue);
     color: white;
+    transition: all 100ms;
 }
 
 nav {
@@ -74,6 +75,7 @@ section {
 .featured-item:hover, .featured-item-link:focus div {
     background-color: var(--d-blue);
     color: white;
+    transition: all 100ms;
 }
 
 .featured-item-link {

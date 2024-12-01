@@ -1,2 +1,64 @@
 /* Google Fonts: Libre Franklin Typeface*/
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --main-font: "Libre Franklin", sans-serif;
+}
+
+body {
+    margin: 1rem;
+}
+
+h1, h2, h3, p, a {
+    font-family: var(--main-font)
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+.header-links {
+    color: #232323;
+    text-decoration: none;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: last baseline;
+    gap: 2rem;
+}
+
+.header-heading {
+    width: min-content;
+}
+
+.opening-img {
+    width: 100%;
+}
+
+/* featured */
+
+.featured-item {
+    text-decoration: none;
+    border: 0.125rem solid black;
+}
+
+.featured-item img {
+    width: 100%;
+    background-size: contain;
+}
+
+.featured-item h3, .featured-item p {
+    margin: 0;
+}
+

@@ -84,7 +84,7 @@ section {
 
 .featured-item img {
     width: 100%;
-    background-size: contain;
+    background-size: cover;
     padding-bottom: 0;
 }
 
@@ -97,6 +97,20 @@ section {
     margin-bottom: 0.3rem;
 }
 
+
+.featured-item {
+    margin-bottom: 0;
+}
+
+.large-section {
+    margin: 6rem auto;
+}
+
+.portfolio-view {
+    display: grid;
+    row-gap: 1rem;
+}
+
 footer {
     display: flex;
     align-items: baseline;
@@ -105,16 +119,7 @@ footer {
 }
 
 @media (width > 35rem) {
-    .portfolio-view {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 1.25rem;
-        row-gap: 2rem;
-    }
 
-    .featured-item {
-        margin-bottom: 0;
-    }
 
     /* readable */
 
@@ -129,6 +134,13 @@ footer {
         width: 64rem;
         margin: 0 auto;
     }
+
+    .portfolio-view {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1.25rem;
+        row-gap: 2rem;
+    }
+
     footer {
         margin: 0 auto 4rem auto; 
     }

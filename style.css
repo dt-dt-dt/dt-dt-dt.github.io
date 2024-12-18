@@ -29,7 +29,7 @@ h1, h2, h3 {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
 }
 
 p, a, li {
@@ -132,4 +132,18 @@ footer {
 .two-col {
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+.pill {
+    padding: 0.5rem 1rem;
+    border: var(--d-blue) solid 0.15rem;
+    background-color: white;
+    color: var(--d-blue);
+    border-radius: 10rem;
+}
+
+.pill:hover {
+    background-color: var(--d-blue);
+    color: white;
+    transition: all 200ms;
 }

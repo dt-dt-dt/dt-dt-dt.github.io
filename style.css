@@ -25,7 +25,7 @@
 h1, h2, h3 {
     /* font-family: Montreal-Medium; */
     font-family: var(--main-font);
-    font-weight: 500;
+    font-weight: 400;
 }
 
 h2 {
@@ -36,6 +36,7 @@ p, a, li {
     /* font-family: Montreal-Book; */
     font-family: var(--main-font);
     /* font-size: 1rem; */
+    font-weight: 200;
 }
 
 a {

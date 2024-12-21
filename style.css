@@ -49,7 +49,7 @@ a:hover, a:focus {
     transition: all 200ms;
 }
 
-.portfolio-item:hover, a:focus {
+.portfolio-item:hover, .portfolio-item:focus {
     background-color: #3549FC;
     color: white;
     padding: 0.25rem 0.45rem;

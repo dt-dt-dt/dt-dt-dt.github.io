@@ -35,6 +35,7 @@ h2 {
 p, a, li {
     /* font-family: Montreal-Book; */
     font-family: var(--main-font);
+    /* font-size: 1rem; */
 }
 
 a {
@@ -107,7 +108,7 @@ header {
 .two-between {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: last baseline;
 }
 
 /* 
@@ -128,9 +129,14 @@ footer {
     padding: 2rem 0;
 }
 
-/* .readable-width {
-    width: 100%;
-} */
+.two-col {
+    display: grid;
+    row-gap: 2rem;
+}
+
+.compact-width, .readable-width {
+    margin: auto 1.25rem;
+}
 
 @media (width > 32rem) {
     .readable-width {
@@ -144,9 +150,11 @@ footer {
         grid-template-columns: 1fr 1fr;
         column-gap: 2rem;
     }
-
-
-
+    .two-col {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 4rem;
+        column-gap: 2rem;
+    }
 }
 
 @media (width > 64rem) {
@@ -157,16 +165,9 @@ footer {
     header {
         margin-top: 4rem !important;
     }
-
-    
 }
 
-.two-col {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 4rem;
-    column-gap: 2rem;
-}
+
 
 .pill {
     padding: 0.5rem 1rem;

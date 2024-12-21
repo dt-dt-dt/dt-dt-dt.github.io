@@ -43,6 +43,11 @@ a {
     text-decoration: none;
 }
 
+a:hover, a:focus {
+    border-bottom: 0.15rem #3549FC solid;
+    transition: all 200ms;
+}
+
 .portfolio-item:hover, a:focus {
     background-color: #3549FC;
     color: white;
@@ -167,6 +172,11 @@ footer {
     }
 }
 
+.header-nav {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+}
 
 
 .pill {

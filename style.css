@@ -82,10 +82,6 @@ header {
     width: 2rem;
 }
 
-.normalize-margin {
-    margin: 0.5rem;
-}
-
 #intro {
     padding: 12rem 0;
     /* text-align: center; */
@@ -94,6 +90,10 @@ header {
 .standard-margin {
     padding: 4rem 0;
 }
+
+/* .normalize-margin h2 {
+    margin-bottom: 4rem;
+} */
 
 .portfolio-view {
     display: grid;
@@ -144,35 +144,6 @@ footer {
     margin: auto 1.25rem;
 }
 
-@media (width > 32rem) {
-    .readable-width {
-        width: 32rem;
-        margin: 0 auto;
-    }
-}
-
-@media (width > 50rem) {
-    .portfolio-view {
-        grid-template-columns: 1fr 1fr;
-        column-gap: 2rem;
-    }
-    .two-col {
-        grid-template-columns: 1fr 1fr;
-        row-gap: 4rem;
-        column-gap: 2rem;
-    }
-}
-
-@media (width > 64rem) {
-    .compact-width {
-        width: 64rem;
-        margin: 0 auto;
-    }
-    header {
-        margin-top: 4rem !important;
-    }
-}
-
 .header-nav {
     display: flex;
     align-items: baseline;
@@ -191,10 +162,53 @@ footer {
 .pill:hover {
     background-color: var(--d-blue);
     color: white;
-    transition: all 200ms;
+}
+
+/* this is yucky. TODO */
+.button-in-intro {
+    position: absolute;
+    top: 12rem;
 }
 
 .with-info {
     display: grid;
     row-gap: 8rem;
+}
+
+@media (width > 21.875rem) {
+    .two-col {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 4rem;
+        column-gap: 2rem;
+    }
+}
+
+
+@media (width > 32rem) {
+    .readable-width {
+        width: 32rem;
+        margin: 0 auto;
+    }
+}
+
+@media (width > 50rem) {
+    .portfolio-view {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 4rem;
+    }
+}
+
+@media (width > 64rem) {
+    .compact-width {
+        width: 64rem;
+        margin: 0 auto;
+    }
+    header {
+        margin-top: 4rem !important;
+    }
+    /* this is yucky. TODO */
+    .button-in-intro {
+        position: absolute;
+        top: 14rem;
+    }
 }

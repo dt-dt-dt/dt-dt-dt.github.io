@@ -22,14 +22,18 @@
     display: none;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4{
     /* font-family: Montreal-Medium; */
     font-family: var(--main-font);
-    font-weight: 400;
+    font-weight: 600;
 }
 
 h2 {
-    font-size: 1.75rem;
+    font-size: 2rem;
+}
+
+h3, h4 {
+    font-weight: 400;
 }
 
 p, a, li {
@@ -104,7 +108,7 @@ header {
     margin: 0;
 }
 
-.portfolio-item img {
+.portfolio-item img, .standard-img {
     width: 100%;
     background-size: cover;
     padding-bottom: 0;
@@ -173,6 +177,7 @@ footer {
 .with-info {
     display: grid;
     row-gap: 8rem;
+    padding-bottom: 0 !important;
 }
 
 @media (width > 21.875rem) {

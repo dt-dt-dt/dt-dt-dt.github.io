@@ -1,0 +1,21 @@
+.colour-pill {
+    padding: 0.5rem;
+    border-radius: 10rem;
+    text-align: center;
+}
+
+#pill-234E9F {
+    background-color: #234E9F;
+    color: white;
+}
+
+#pill-232323 {
+    background-color: #232323;
+    color: white;
+}
+
+#pill-FBFBFB {
+    background-color: #FBFBFB;
+    color: #232323;
+    border: #232323 0.025rem solid;
+}
